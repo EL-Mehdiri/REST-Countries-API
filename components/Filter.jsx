@@ -1,20 +1,25 @@
 'use client'
 import data from '../countries-api/data.json'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 const Filter = ({ setresults }) => {
     const [search, setsearch] = useState('')
+
+
 
     const fetchData = (value) => {
         const result = data.filter((countrie) => {
             return value && countrie && countrie.region.toLowerCase().includes(value)
         })
-        setresults(result || 'africa')
+        setresults(result)
     }
-
     const handlesearch = (value) => {
         setsearch(value);
         fetchData(value)
     }
+    useEffect(() => {
+        fetchData('africa')
+    }, [])
+
     return (
         <div>
             <select className='w-[300px] border-none  p-4 rounded-sm bg-white shadow-xl '>
