@@ -17,7 +17,7 @@ const Filter = ({ setresults }) => {
         fetchData(value)
     }
     useEffect(() => {
-        fetchData('africa')
+        fetchData([])
     }, [])
 
     return (
