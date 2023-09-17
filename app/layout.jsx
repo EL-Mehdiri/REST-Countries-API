@@ -1,5 +1,6 @@
 import { Nav } from '@/components'
 import './globals.css'
+import Providers from './providers'
 
 export const metadata = {
   title: 'Countries API',
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body >
-        <Nav />
-        {children}
+        <Providers>
+          <Nav />
+          {children}
+        </Providers>
       </body>
     </html>
   )

@@ -17,12 +17,12 @@ const Filter = ({ setresults }) => {
         fetchData(value)
     }
     useEffect(() => {
-        fetchData([])
+        fetchData('africa')
     }, [])
 
     return (
         <div>
-            <select className='w-[300px] border-none  p-4 rounded-sm bg-white shadow-xl '>
+            <select className='lg:w-[300px] w-[60vw] border-none dark:bg-slate-800  p-4 rounded-sm bg-white shadow-xl '>
                 <option onClick={() => handlesearch('africa')} value='Africa'>Africa</option>
                 <option onClick={() => handlesearch('america')} value='America'>America</option>
                 <option onClick={() => handlesearch('asia')} value='Asia'>Asia</option>

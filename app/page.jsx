@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className='flex flex-col px-4 md:px-10 lg:px-16 py-5 '>
-      <div className='flex justify-between px-10 items-center py-10'>
+      <div className='flex flex-col lg:flex-row gap-5 lg:justify-between lg:px-10 lg:items-center py-10'>
         <SearchBar setresults={setresults} />
         <Filter setresults={setresults} />
       </div>
